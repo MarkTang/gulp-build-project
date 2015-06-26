@@ -8,12 +8,13 @@ This is a hybridapp demo，use angularjs framework，build width gulp。
     ```
         $ npm install -g gulp
     ```
+
 4. Go into gulp folder，then install gulp locally like this:
     ```
         $ npm install gulp
     ```
+
 5. Run
-```
-    $ gulp
-```
-OK。
+    ```
+        $ gulp
+    ```
