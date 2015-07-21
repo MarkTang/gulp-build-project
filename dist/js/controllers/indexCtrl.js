@@ -1,1 +1,0 @@
-app.controller("indexCtrl",["$rootScope","$scope","$q","$state","TrackDataService",function(t,e,o,r,c){e.text=" word"}]);

@@ -11,9 +11,8 @@ This is a hybridapp demo，use angularjs framework，build width gulp。
 
 4. Go into gulp folder，then install gulp locally like this:
     ```
-        $ npm install gulp
+        $ npm install
     ```
-
 5. Run
     ```
         $ gulp

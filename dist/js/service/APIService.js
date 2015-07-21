@@ -1,1 +1,0 @@
-app.factory("API",["APIAddress",function(t){function n(){var n="http://tcmobileapi.17usoft.com/",o="http://61.155.197.172:8008/",r="http://61.155.197.172:8008/previewAPI/";return 0==t.on?o:1==t.on?n:r}return n()}]);

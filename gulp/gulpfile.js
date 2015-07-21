@@ -73,10 +73,10 @@ var gulp = require('gulp'),
 
 //需要合并和压缩的文件
 gulp.task('concat', function () {
-    gulp.src(['../js/libs/angular.min.js','../js/libs/*.js', '!../js/libs/bridge*.js'])
+    gulp.src(['../js/libs/angular.min.js','../js/libs/*.js', '!../js/libs/reeoo*.js'])
         .pipe(concat('libs.min.js'))
         .pipe(jsmin())
-        .pipe(addsrc('../js/libs/bridge*.js'))
+        .pipe(addsrc('../js/libs/reeoo*.js'))
         .pipe(jsmin())
         .pipe(gulp.dest(option.buildPath + "/js/libs/"))
 });
