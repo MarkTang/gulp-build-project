@@ -3,8 +3,7 @@ app.controller('indexCtrl', [
     '$scope',
     '$q',
     '$state',
-    'TrackDataService',
-    function ($rootScope, $scope, $q, $state, TrackDataService) {
+    function ($rootScope, $scope, $q, $state) {
         $scope.text = " word";
     }
 ]);

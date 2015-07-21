@@ -21,15 +21,3 @@ app.config([
             })
             
     }])
-    .value('APIAddress', {
-        /*
-        * 0:测试地址,
-        * 1:正式地址，
-        * 2或其它值:fake地址
-        * */
-        on:1
-    }).value("statusCode", {
-        NETWORKNOTON: 77,
-        NETWORKERROR: 55,
-        SERVERCRASH: 88
-    })
