@@ -2,8 +2,7 @@ app.run([
     '$rootScope',
     '$state',
     '$location',
-    'TrackDataService',
-    function ($rootScope, $state, $location, TrackDataService) {
+    function ($rootScope, $state, $location) {
 
         $rootScope.netWorkNotOn = false;
         $rootScope.netWorkError = false;
