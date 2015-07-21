@@ -7,12 +7,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     clean = require("gulp-clean"),
     replace = require('gulp-replace'),
-    // imagemin = require('gulp-imagemin'),
-    // pngquant = require('imagemin-pngquant'),
     processhtml = require('gulp-processhtml'),
-    //cache = require('gulp-cache'),
     addsrc = require('gulp-add-src'),
-    //$ = require('gulp-load-plugins')(),
     option = {
         buildPath: "../dist",
         useCache:1//图片压缩是否采用缓存
@@ -27,31 +23,6 @@ var gulp = require('gulp'),
 
     })
 
-    //压缩图片
-    //gulp.task('imgmin', function () {
-    //    return gulp.src("../img/**/*")
-    //
-    //        //.pipe(gulpif(option.useCache, cache(imagemin({
-    //        //    optimizationLevel: 7, //类型：Number  默认：3  取值范围：0-7（优化等级）
-    //        //    progressive: true,//类型：Boolean 默认：false 无损压缩jpg图片
-    //        //    interlaced: true,//类型：Boolean 默认：false 隔行扫描gif进行渲染
-    //        //    use: [pngquant()]//可以压缩70% //使用pngquant深度压缩png图片的imagemin插件
-    //        //}))))
-    //        //.pipe(gulpif(!option.useCache,imagemin({
-    //        //    optimizationLevel: 7, //类型：Number  默认：3  取值范围：0-7（优化等级）
-    //        //    progressive: true,//类型：Boolean 默认：false 无损压缩jpg图片
-    //        //    interlaced: true,//类型：Boolean 默认：false 隔行扫描gif进行渲染
-    //        //    use: [pngquant()]//可以压缩70% //使用pngquant深度压缩png图片的imagemin插件
-    //        //})))
-    //        .pipe(imagemin({
-    //            optimizationLevel: 7, //类型：Number  默认：3  取值范围：0-7（优化等级）
-    //            progressive: true,//类型：Boolean 默认：false 无损压缩jpg图片
-    //            interlaced: true,//类型：Boolean 默认：false 隔行扫描gif进行渲染
-    //            use: [pngquant()]//可以压缩70% //使用pngquant深度压缩png图片的imagemin插件
-    //        }))
-    //        .pipe(gulp.dest(option.buildPath + '/img/'))
-    //});
-
     gulp.task("imgcopy", function () {
         gulp.src("../img/**/*")
         .pipe(gulp.dest(option.buildPath + '/img/'))
@@ -60,13 +31,6 @@ var gulp = require('gulp'),
     //js文件压缩
     gulp.task('jsmin', function () {
         gulp.src(["../js/**/**/*.js",'!../js/libs/*.js'])
-            ////.pipe(changed(option.buildPath))
-            //.pipe(foreach(function(stream, file){
-            //    return stream
-            //        //.pipe(size())
-            //        .pipe(jsmin())
-            //    //.pipe(size())
-            //}))
             .pipe(jsmin())
             .pipe(gulp.dest(option.buildPath+ "/js/"))
 });
@@ -112,12 +76,6 @@ gulp.task("htmlmin", function () {
         }))
         .pipe(gulp.dest(option.buildPath + '/views'))
 })
-
-
-// 监视文件的变化
-// gulp.task('watch', function() {
-//     gulp.watch('../../traffic', ['jshint', 'minify']);
-// });
 
 
 // 默认任务 清空图片、样式、js并重建 运行语句 gulp
