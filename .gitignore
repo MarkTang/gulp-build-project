@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+gulp-build-project/gulp/node_modules/
+gulp-build-project/dist
